@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "BaseWindow.h"
 
-
+// adfasefseaf
 CBaseWindow::CBaseWindow(void) : m_bIsActive(false)
 {
 }
