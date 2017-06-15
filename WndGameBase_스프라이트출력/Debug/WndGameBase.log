@@ -1,0 +1,27 @@
+﻿  stdafx.cpp
+  WndGameBase.cpp
+  Vector2d.cpp
+c:\users\김주혁\desktop\wndgamebase_스프라이트출력\vector2d.cpp(69): warning C4244: '/=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\김주혁\desktop\wndgamebase_스프라이트출력\vector2d.cpp(70): warning C4244: '/=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  TimeManager.cpp
+  System.cpp
+c:\users\김주혁\desktop\wndgamebase_스프라이트출력\system.cpp(146): warning C4244: '=': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\김주혁\desktop\wndgamebase_스프라이트출력\system.cpp(147): warning C4244: '=': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  MainProc.cpp
+  InputManager.cpp
+  ImageManager.cpp
+c:\users\김주혁\desktop\wndgamebase_스프라이트출력\imagemanager.cpp(35): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _stricmp. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\string.h(554): note: 'stricmp' 선언을 참조하십시오.
+c:\users\김주혁\desktop\wndgamebase_스프라이트출력\imagemanager.cpp(43): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\string.h(136): note: 'strcpy' 선언을 참조하십시오.
+  ImageInfo.cpp
+  Gdi.cpp
+c:\users\김주혁\desktop\wndgamebase_스프라이트출력\gdi.cpp(276): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+  FrameSkip.cpp
+  BaseWindow.cpp
+  BaseRender.cpp
+c:\users\김주혁\desktop\wndgamebase_스프라이트출력\baserender.cpp(44): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\김주혁\desktop\wndgamebase_스프라이트출력\baserender.cpp(47): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  코드를 생성하고 있습니다...
+  WndGameBase.vcxproj -> C:\Users\김주혁\Desktop\WndGameBase_스프라이트출력\Debug\WndGameBase.exe
+  WndGameBase.vcxproj -> C:\Users\김주혁\Desktop\WndGameBase_스프라이트출력\Debug\WndGameBase.pdb (Partial PDB)
