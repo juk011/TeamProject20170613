@@ -21,7 +21,7 @@ private:
 public:                 //여기서 그림생성
 	CBaseRender* m_pImage;
 	CBaseRender* m_pSprite;
-	CBaseRender* a;
+	CBaseRender* Body;
 
 
 public:

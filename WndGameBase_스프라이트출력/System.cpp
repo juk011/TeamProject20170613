@@ -37,11 +37,11 @@ bool CSystem::Initialize(void)
 	m_pSprite->SetColorKey(RGB(255, 255, 255));
 
 
-	a = new CBaseRender;
-	a->Initialize();
-	a->Load("./Images/Character/body.bmp");
-	a->SetPos(Vector2D(200.0f, 0.0f));
-	a->SetColorKey(RGB(255, 0, 255));
+	Body = new CBaseRender;
+	Body->Initialize();
+	Body->Load("./Images/Character/body.bmp");
+	Body->SetPos(Vector2D(80, 30));
+	Body->SetColorKey(RGB(255, 0, 255));
 
 	return true;
 }
@@ -63,7 +63,7 @@ void CSystem::Update(void)
 
 		m_pImage->Render();
 		m_pSprite->Render();
-		a->Render();
+		Body->Render();
 		
 
 #ifdef _DEBUG
