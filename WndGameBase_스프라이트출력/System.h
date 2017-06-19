@@ -22,6 +22,14 @@ public:                 //여기서 그림생성
 	CBaseRender* m_pImage;
 	CBaseRender* m_pSprite;
 	CBaseRender* Body;
+<<<<<<< HEAD
+=======
+	CBaseRender* EyeIcon;
+	CBaseRender* MouthIcon;
+	CBaseRender* HairIcon;
+	CBaseRender* ClothesIcon;
+	CBaseRender* ShoesIcon;
+>>>>>>> bb4c5cb8cdcf1f3b8ceea5115aefc20d31051fff
 
 
 public:
