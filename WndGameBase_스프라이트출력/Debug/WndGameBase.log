@@ -5,8 +5,8 @@ c:\users\김주혁\desktop\wndgamebase_스프라이트출력\vector2d.cpp(69): w
 c:\users\김주혁\desktop\wndgamebase_스프라이트출력\vector2d.cpp(70): warning C4244: '/=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   TimeManager.cpp
   System.cpp
-c:\users\김주혁\desktop\wndgamebase_스프라이트출력\system.cpp(146): warning C4244: '=': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\김주혁\desktop\wndgamebase_스프라이트출력\system.cpp(147): warning C4244: '=': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\김주혁\desktop\wndgamebase_스프라이트출력\system.cpp(154): warning C4244: '=': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\김주혁\desktop\wndgamebase_스프라이트출력\system.cpp(155): warning C4244: '=': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   MainProc.cpp
   InputManager.cpp
   ImageManager.cpp

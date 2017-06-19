@@ -32,9 +32,15 @@ bool CSystem::Initialize(void)
 
 	m_pSprite = new CBaseRender;
 	m_pSprite->Initialize();
-	m_pSprite->Load("./Images/sprite.bmp");
-	m_pSprite->SetPos(Vector2D(200.0f, 0.0f));
+	m_pSprite->Load("./Images/Hair.bmp");
+	m_pSprite->SetPos(Vector2D(200,100));
 	m_pSprite->SetColorKey(RGB(255, 255, 255));
+
+	a = new CBaseRender;
+	a->Initialize();
+	a->Load("./Images/Sprite.bmp");
+	a->SetPos(Vector2D(200.0f, 0.0f));
+	a->SetColorKey(RGB(255, 255, 255));
 
 	return true;
 }
@@ -56,6 +62,8 @@ void CSystem::Update(void)
 
 		m_pImage->Render();
 		m_pSprite->Render();
+		a->Render();
+		
 
 #ifdef _DEBUG
 		static unsigned int nCount = 0;

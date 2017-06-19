@@ -18,9 +18,11 @@ private:
 	bool m_bIsMouseLeft;
 	bool m_bIsMouseRight;
 	bool m_bIsMouseMid;
-public:
+public:                 //여기서 그림생성
 	CBaseRender* m_pImage;
 	CBaseRender* m_pSprite;
+	CBaseRender* a;
+
 
 public:
 	CSystem(void);
