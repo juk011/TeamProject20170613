@@ -27,7 +27,7 @@ bool CSystem::Initialize(void)
 
 	m_pImage = new CBaseRender;
 	m_pImage->Initialize();
-	m_pImage->Load("./Images/MainGame.bmp");
+	m_pImage->Load("./Images/Stage.bmp");
 	m_pImage->SetPos(Vector2D(0.0f, 0.0f));
 
 	m_pSprite = new CBaseRender;
@@ -36,11 +36,12 @@ bool CSystem::Initialize(void)
 	m_pSprite->SetPos(Vector2D(200,100));
 	m_pSprite->SetColorKey(RGB(255, 255, 255));
 
+
 	a = new CBaseRender;
 	a->Initialize();
-	a->Load("./Images/Sprite.bmp");
+	a->Load("./Images/Character/body.bmp");
 	a->SetPos(Vector2D(200.0f, 0.0f));
-	a->SetColorKey(RGB(255, 255, 255));
+	a->SetColorKey(RGB(255, 0, 255));
 
 	return true;
 }
