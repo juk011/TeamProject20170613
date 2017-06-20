@@ -38,5 +38,7 @@
 #include "InputManager.h"
 #include "ImageInfo.h"
 #include "ImageManager.h"
+#include "ButtonBase.h"
 #include "System.h"
 #include "MainProc.h"
+

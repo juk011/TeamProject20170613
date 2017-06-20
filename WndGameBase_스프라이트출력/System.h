@@ -1,6 +1,7 @@
 #pragma once
 
 class CFrameSkip;
+class CButtonBase;
 
 class CSystem : public CSingleton<CSystem>,
 	            public CBaseWindow,
@@ -19,9 +20,11 @@ private:
 	bool m_bIsMouseRight;
 	bool m_bIsMouseMid;
 public:                 //여기서 그림생성
-	CBaseRender* m_pImage;
+	CBaseRender* Stage;
 	CBaseRender* m_pSprite;
 	CBaseRender* Body;
+	CBaseRender* MainGame;
+	CButtonBase* Start[2];
 
 	CBaseRender* EyeIcon;
 	CBaseRender* MouthIcon;

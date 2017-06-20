@@ -29,6 +29,8 @@ struct Vector2D //class
 	float	Distance(const Vector2D& v2)const;
 	void		Normalize();
 	inline  Vector2D  Perp()const { return Vector2D(-y, x); }
+
+	operator POINT() { return { (long)x, (long)y }; }
 };
 
 std::ostream& operator<<(std::ostream& os, const Vector2D& rhs);

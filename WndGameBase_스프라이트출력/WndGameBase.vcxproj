@@ -80,6 +80,7 @@
   <ItemGroup>
     <ClInclude Include="BaseRender.h" />
     <ClInclude Include="BaseWindow.h" />
+    <ClInclude Include="ButtonBase.h" />
     <ClInclude Include="FrameSkip.h" />
     <ClInclude Include="Gdi.h" />
     <ClInclude Include="ImageInfo.h" />
@@ -100,6 +101,7 @@
   <ItemGroup>
     <ClCompile Include="BaseRender.cpp" />
     <ClCompile Include="BaseWindow.cpp" />
+    <ClCompile Include="ButtonBase.cpp" />
     <ClCompile Include="FrameSkip.cpp" />
     <ClCompile Include="Gdi.cpp" />
     <ClCompile Include="ImageInfo.cpp" />

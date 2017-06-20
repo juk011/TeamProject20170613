@@ -25,10 +25,42 @@ bool CSystem::Initialize(void)
 	m_pImageManager = new CImageManager;
 	m_pImageManager->Initialize();
 
-	m_pImage = new CBaseRender;
-	m_pImage->Initialize();
-	m_pImage->Load("./Images/Stage.bmp");
-	m_pImage->SetPos(Vector2D(0.0f, 0.0f));
+	//게임 인트로화면
+
+	MainGame = new CBaseRender;
+	MainGame->Initialize();
+	MainGame->Load("./Images/MainGame.bmp");
+	MainGame->SetPos(Vector2D(0.0f, 0.0f));
+
+
+	Start[0] = new CButtonBase;
+	Start[0]->Initialize();
+	Start[0]->Load("./Images/ui_main/10_1.bmp");
+	Start[0]->SetColorKey(RGB(255, 0, 255));
+    Start[0]->SetPosAndSize(Vector2D(130, 130),240,80,100,100);
+
+	Start[1] = new CButtonBase;
+	Start[1]->Initialize();
+	Start[1]->Load("./Images/ui_main/10_2.bmp");
+	Start[1]->SetPos(Vector2D(130, 130));
+
+	Start[2] = new CButtonBase;
+	Start[2]->Initialize();
+	Start[2]->Load("./Images/ui_main/10_3.bmp");
+	Start[2]->SetPos(Vector2D(0.0f, 0.0f));
+
+	RECT Temp;
+
+
+
+
+
+	//인게임 화면
+
+	Stage = new CBaseRender;
+	Stage->Initialize();
+	Stage->Load("./Images/Stage.bmp");
+	Stage->SetPos(Vector2D(0.0f, 0.0f));
 
 	m_pSprite = new CBaseRender;
 	m_pSprite->Initialize();
@@ -43,7 +75,7 @@ bool CSystem::Initialize(void)
 	EyeIcon->Initialize();
 	EyeIcon->Load("./Images/ui_main/1_1.bmp");
 	EyeIcon->SetPos(Vector2D(345, 60));
-	EyeIcon->SetColorKey(RGB(252, 0, 255));
+	EyeIcon->SetColorKey(RGB(255, 0, 255));
 
 	MouthIcon = new CBaseRender;
 	MouthIcon->Initialize();
@@ -96,9 +128,20 @@ void CSystem::Update(void)
 		g_pGdi->Rect(0, 0, 640, 480);
         */
 
-		m_pImage->Render();
+		//MainGame->Render();
+
+
+		
+		Stage->Render();
 		m_pSprite->Render();
 		Body->Render();
+
+		Start[0]->Render();
+		if (PtInRect(&Start[0]->rc, m_vMouseXY))
+		{
+			Start[1]->Render();
+		}
+
 
 		
 		EyeIcon->Render();
@@ -150,7 +193,7 @@ void CSystem::Terminate(void)
 	g_pInputManager->SetInputHandler(NULL);
 
 	m_pSprite->Terminate();
-	m_pImage->Terminate();
+	Stage->Terminate();
 
 	delete m_pImageManager;
 	delete m_pInputManager;
