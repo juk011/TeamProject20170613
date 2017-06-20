@@ -34,17 +34,16 @@ bool CSystem::Initialize(void)
 	m_pSprite->Initialize();
 	m_pSprite->Load("./Images/Hair.bmp");
 	m_pSprite->SetPos(Vector2D(200,100));
-<<<<<<< HEAD
 	m_pSprite->SetColorKey(RGB(255, 255, 255));
 
-=======
+
 	m_pSprite->SetColorKey(RGB(255, 0, 255));
 
 	EyeIcon = new CBaseRender;
 	EyeIcon->Initialize();
 	EyeIcon->Load("./Images/ui_main/1_1.bmp");
 	EyeIcon->SetPos(Vector2D(345, 60));
-	EyeIcon->SetColorKey(RGB(255, 0, 255));
+	EyeIcon->SetColorKey(RGB(252, 0, 255));
 
 	MouthIcon = new CBaseRender;
 	MouthIcon->Initialize();
@@ -69,16 +68,14 @@ bool CSystem::Initialize(void)
 	ShoesIcon->Load("./Images/ui_main/6_1.bmp");
 	ShoesIcon->SetPos(Vector2D(345, 260));
 	ShoesIcon->SetColorKey(RGB(255, 0, 255));
->>>>>>> bb4c5cb8cdcf1f3b8ceea5115aefc20d31051fff
+
 
 	Body = new CBaseRender;
 	Body->Initialize();
 	Body->Load("./Images/Character/body.bmp");
-<<<<<<< HEAD
+
 	Body->SetPos(Vector2D(80, 30));
-=======
 	Body->SetPos(Vector2D(80, 50));
->>>>>>> bb4c5cb8cdcf1f3b8ceea5115aefc20d31051fff
 	Body->SetColorKey(RGB(255, 0, 255));
 
 	return true;
@@ -102,16 +99,15 @@ void CSystem::Update(void)
 		m_pImage->Render();
 		m_pSprite->Render();
 		Body->Render();
-<<<<<<< HEAD
+
 		
-=======
 		EyeIcon->Render();
 		MouthIcon->Render();
 		HairIcon->Render();
 		ClothesIcon->Render();
 		ShoesIcon->Render();
 
->>>>>>> bb4c5cb8cdcf1f3b8ceea5115aefc20d31051fff
+		
 
 #ifdef _DEBUG
 		static unsigned int nCount = 0;
