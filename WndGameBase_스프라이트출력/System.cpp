@@ -3,6 +3,7 @@
 CSystem::CSystem(void)
 {
 	m_bIsReady = false;
+	IsMain = true;
 }
 
 CSystem::~CSystem(void)
@@ -37,19 +38,32 @@ bool CSystem::Initialize(void)
 	Start[0]->Initialize();
 	Start[0]->Load("./Images/ui_main/10_1.bmp");
 	Start[0]->SetColorKey(RGB(255, 0, 255));
-    Start[0]->SetPosAndSize(Vector2D(130, 130),240,80,100,100);
-
+    Start[0]->SetPosAndSize(Vector2D(145, 300),240,80,135,89);
 	Start[1] = new CButtonBase;
 	Start[1]->Initialize();
 	Start[1]->Load("./Images/ui_main/10_2.bmp");
-	Start[1]->SetPos(Vector2D(130, 130));
-
+	Start[1]->SetColorKey(RGB(255, 0, 255));
+	Start[1]->SetPos(Vector2D(145, 300));
 	Start[2] = new CButtonBase;
 	Start[2]->Initialize();
 	Start[2]->Load("./Images/ui_main/10_3.bmp");
-	Start[2]->SetPos(Vector2D(0.0f, 0.0f));
+	Start[2]->SetPos(Vector2D(145, 300));
 
-	RECT Temp;
+
+	Exit[0] = new CButtonBase;
+	Exit[0]->Initialize();
+	Exit[0]->Load("./Images/ui_main/11_1.bmp");
+	Exit[0]->SetColorKey(RGB(255, 0, 255));
+	Exit[0]->SetPosAndSize(Vector2D(145, 420), 240, 80, 135, 89);
+	Exit[1] = new CButtonBase;
+	Exit[1]->Initialize();
+	Exit[1]->Load("./Images/ui_main/11_2.bmp");
+	Exit[1]->SetColorKey(RGB(255, 0, 255));
+	Exit[1]->SetPos(Vector2D(145, 420));
+	Exit[2] = new CButtonBase;
+	Exit[2]->Initialize();
+	Exit[2]->Load("./Images/ui_main/11_3.bmp");
+	Exit[2]->SetPos(Vector2D(145, 420));
 
 
 
@@ -66,40 +80,98 @@ bool CSystem::Initialize(void)
 	m_pSprite->Initialize();
 	m_pSprite->Load("./Images/Hair.bmp");
 	m_pSprite->SetPos(Vector2D(200,100));
-	m_pSprite->SetColorKey(RGB(255, 255, 255));
-
-
 	m_pSprite->SetColorKey(RGB(255, 0, 255));
 
-	EyeIcon = new CBaseRender;
-	EyeIcon->Initialize();
-	EyeIcon->Load("./Images/ui_main/1_1.bmp");
-	EyeIcon->SetPos(Vector2D(345, 60));
-	EyeIcon->SetColorKey(RGB(255, 0, 255));
+	EyeIcon[0] = new CButtonBase;
+	EyeIcon[0]->Initialize();
+	EyeIcon[0]->Load("./Images/ui_main/1_1.bmp");
+	EyeIcon[0]->SetPosAndSize(Vector2D(345, 60), 96, 48, 0, 0);
+	EyeIcon[0]->SetColorKey(RGB(255, 0, 255));
 
-	MouthIcon = new CBaseRender;
-	MouthIcon->Initialize();
-	MouthIcon->Load("./Images/ui_main/3_1.bmp");
-	MouthIcon->SetPos(Vector2D(345, 110));
-	MouthIcon->SetColorKey(RGB(255, 0, 255));
+	EyeIcon[1] = new CButtonBase;
+	EyeIcon[1]->Initialize();
+	EyeIcon[1]->Load("./Images/ui_main/1_3.bmp");
+	EyeIcon[1]->SetPos(Vector2D(345, 60));
+	EyeIcon[1]->SetColorKey(RGB(255, 0, 255));
 
-	HairIcon = new CBaseRender;
-	HairIcon->Initialize();
-	HairIcon->Load("./Images/ui_main/4_1.bmp");
-	HairIcon->SetPos(Vector2D(345, 160));
-	HairIcon->SetColorKey(RGB(255, 0, 255));
+	EyeIcon[2] = new CButtonBase;
+	EyeIcon[2]->Initialize();
+	EyeIcon[2]->Load("./Images/ui_main/1_2.bmp");
+	EyeIcon[2]->SetPos(Vector2D(345, 60));
+	EyeIcon[2]->SetColorKey(RGB(255, 0, 255));
 
-	ClothesIcon = new CBaseRender;
-	ClothesIcon->Initialize();
-	ClothesIcon->Load("./Images/ui_main/5_1.bmp");
-	ClothesIcon->SetPos(Vector2D(345, 210));
-	ClothesIcon->SetColorKey(RGB(255, 0, 255));
 
-	ShoesIcon = new CBaseRender;
-	ShoesIcon->Initialize();
-	ShoesIcon->Load("./Images/ui_main/6_1.bmp");
-	ShoesIcon->SetPos(Vector2D(345, 260));
-	ShoesIcon->SetColorKey(RGB(255, 0, 255));
+	MouthIcon[0] = new CButtonBase;
+	MouthIcon[0]->Initialize();
+	MouthIcon[0]->Load("./Images/ui_main/3_1.bmp");
+	MouthIcon[0]->SetPosAndSize(Vector2D(345, 110), 96, 48, 0, 0);
+	MouthIcon[0]->SetColorKey(RGB(255, 0, 255));
+
+	MouthIcon[1] = new CButtonBase;
+	MouthIcon[1]->Initialize();
+	MouthIcon[1]->Load("./Images/ui_main/3_3.bmp");
+	MouthIcon[1]->SetPos(Vector2D(345, 110));
+	MouthIcon[1]->SetColorKey(RGB(255, 0, 255));
+
+	MouthIcon[2] = new CButtonBase;
+	MouthIcon[2]->Initialize();
+	MouthIcon[2]->Load("./Images/ui_main/3_2.bmp");
+	MouthIcon[2]->SetPos(Vector2D(345, 110));
+	MouthIcon[2]->SetColorKey(RGB(255, 0, 255));
+
+	HairIcon[0] = new CButtonBase;
+	HairIcon[0]->Initialize();
+	HairIcon[0]->Load("./Images/ui_main/4_1.bmp");
+	HairIcon[0]->SetPosAndSize(Vector2D(345, 160), 96, 48, 0, 0);
+	HairIcon[0]->SetColorKey(RGB(255, 0, 255));
+
+	HairIcon[1] = new CButtonBase;
+	HairIcon[1]->Initialize();
+	HairIcon[1]->Load("./Images/ui_main/4_3.bmp");
+	HairIcon[1]->SetPos(Vector2D(345, 160));
+	HairIcon[1]->SetColorKey(RGB(255, 0, 255));
+
+	HairIcon[2] = new CButtonBase;
+	HairIcon[2]->Initialize();
+	HairIcon[2]->Load("./Images/ui_main/4_2.bmp");
+	HairIcon[2]->SetPos(Vector2D(345, 160));
+	HairIcon[2]->SetColorKey(RGB(255, 0, 255));
+
+	ClothesIcon[0] = new CButtonBase;
+	ClothesIcon[0]->Initialize();
+	ClothesIcon[0]->Load("./Images/ui_main/5_1.bmp");
+	ClothesIcon[0]->SetPosAndSize(Vector2D(345, 210), 96, 48, 0, 0);
+	ClothesIcon[0]->SetColorKey(RGB(255, 0, 255));
+
+	ClothesIcon[1] = new CButtonBase;
+	ClothesIcon[1]->Initialize();
+	ClothesIcon[1]->Load("./Images/ui_main/5_3.bmp");
+	ClothesIcon[1]->SetPos(Vector2D(345, 210));
+	ClothesIcon[1]->SetColorKey(RGB(255, 0, 255));
+
+	ClothesIcon[2] = new CButtonBase;
+	ClothesIcon[2]->Initialize();
+	ClothesIcon[2]->Load("./Images/ui_main/5_2.bmp");
+	ClothesIcon[2]->SetPos(Vector2D(345, 210));
+	ClothesIcon[2]->SetColorKey(RGB(255, 0, 255));
+
+	ShoesIcon[0] = new CButtonBase;
+	ShoesIcon[0]->Initialize();
+	ShoesIcon[0]->Load("./Images/ui_main/6_1.bmp");
+	ShoesIcon[0]->SetPosAndSize(Vector2D(345, 260), 96, 48, 0, 0);
+	ShoesIcon[0]->SetColorKey(RGB(255, 0, 255));
+
+	ShoesIcon[1] = new CButtonBase;
+	ShoesIcon[1]->Initialize();
+	ShoesIcon[1]->Load("./Images/ui_main/6_3.bmp");
+	ShoesIcon[1]->SetPos(Vector2D(345, 260));
+	ShoesIcon[1]->SetColorKey(RGB(255, 0, 255));
+
+	ShoesIcon[2] = new CButtonBase;
+	ShoesIcon[2]->Initialize();
+	ShoesIcon[2]->Load("./Images/ui_main/6_2.bmp");
+	ShoesIcon[2]->SetPos(Vector2D(345, 260));
+	ShoesIcon[2]->SetColorKey(RGB(255, 0, 255));
 
 
 	Body = new CBaseRender;
@@ -118,6 +190,7 @@ void CSystem::Update(void)
 	CTimeManager::Pulse();
 	m_pInputManager->Pulse();
 
+
 	float fTimeStep = CTimeManager::GetTimeStep();
 
 	if (m_pGameFrame->Update(fTimeStep))
@@ -128,27 +201,109 @@ void CSystem::Update(void)
 		g_pGdi->Rect(0, 0, 640, 480);
         */
 
-		//MainGame->Render();
+	
+		if (IsMain)
+		{
+			MainGame->Render();
+			Start[0]->Render();
+			Exit[0]->Render();
 
+		}
+
+
+		if (!IsMain)
+		{
+
+
+
+
+			Stage->Render();
+
+
+			EyeIcon[0]->Render();
+			if (PtInRect(&EyeIcon[0]->rc, m_vMouseXY))
+			{
+				EyeIcon[1]->Render();
+				if(m_bIsMouseLeft)
+				{
+					EyeIcon[2]->Render();
+				}
+			}
+
+			MouthIcon[0]->Render();
+			if (PtInRect(&MouthIcon[0]->rc, m_vMouseXY))
+			{
+				MouthIcon[1]->Render();
+				if (m_bIsMouseLeft)
+				{
+					MouthIcon[2]->Render();
+				}
+			}
+
+			HairIcon[0]->Render();
+			if (PtInRect(&HairIcon[0]->rc, m_vMouseXY))
+			{
+				HairIcon[1]->Render();
+				if (m_bIsMouseLeft)
+				{
+					HairIcon[2]->Render();
+				}
+			}
+			ClothesIcon[0]->Render();
+			if (PtInRect(&ClothesIcon[0]->rc, m_vMouseXY))
+			{
+				ClothesIcon[1]->Render();
+				if (m_bIsMouseLeft)
+				{
+					ClothesIcon[2]->Render();
+				}
+			}
+			ShoesIcon[0]->Render();
+			if (PtInRect(&ShoesIcon[0]->rc, m_vMouseXY))
+			{
+				ShoesIcon[1]->Render();
+				if (m_bIsMouseLeft)
+				{
+					ShoesIcon[2]->Render();
+				}
+			}
+
+
+
+		}
 
 		
-		Stage->Render();
-		m_pSprite->Render();
-		Body->Render();
 
-		Start[0]->Render();
-		if (PtInRect(&Start[0]->rc, m_vMouseXY))
+	
+		if (PtInRect(&Start[0]->rc, m_vMouseXY))   //스타트 버튼 체크 
 		{
 			Start[1]->Render();
+			if (m_bIsMouseLeft)
+			{
+			
+				Start[2]->Render();
+				IsMain = false;
+				Start[0]->Terminate();
+				Start[1]->Terminate();
+				Start[2]->Terminate();
+				 Exit[0]->Terminate();
+				 Exit[1]->Terminate();
+				 Exit[2]->Terminate();
+			}
+		}
+
+		if (PtInRect(&Exit[0]->rc, m_vMouseXY))
+		{
+			Exit[1]->Render();
+			if (m_bIsMouseLeft)
+			{
+				PostQuitMessage(0);
+			}
 		}
 
 
 		
-		EyeIcon->Render();
-		MouthIcon->Render();
-		HairIcon->Render();
-		ClothesIcon->Render();
-		ShoesIcon->Render();
+
 
 		
 

@@ -23,6 +23,7 @@ bool CButtonBase::Initialize()
 
 void CButtonBase::Terminate()
 {
+	delete this;
 }
 
 bool CButtonBase::Pulse()
@@ -64,6 +65,7 @@ bool CButtonBase::Load(const char* szURL)
 
 	return true;
 }
+
 
 
 

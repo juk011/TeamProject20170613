@@ -9,7 +9,8 @@ class CSystem : public CSingleton<CSystem>,
 				public IInputHandler
 {
 private:
-	bool m_bIsReady;						// 시작하기전 대기.
+	bool m_bIsReady;	  // 시작하기전 대기.	
+	bool IsMain;   
 	CFrameSkip*		m_pGameFrame;
 	CInputManager*	m_pInputManager;
 	CImageManager*	m_pImageManager;
@@ -24,13 +25,14 @@ public:                 //여기서 그림생성
 	CBaseRender* m_pSprite;
 	CBaseRender* Body;
 	CBaseRender* MainGame;
-	CButtonBase* Start[2];
+	CButtonBase* Start[3];
+	CButtonBase* Exit[3];
 
-	CBaseRender* EyeIcon;
-	CBaseRender* MouthIcon;
-	CBaseRender* HairIcon;
-	CBaseRender* ClothesIcon;
-	CBaseRender* ShoesIcon;
+	CButtonBase* EyeIcon[3];
+	CButtonBase* MouthIcon[3];
+	CButtonBase* HairIcon[3];
+	CButtonBase* ClothesIcon[3];
+	CButtonBase* ShoesIcon[3];
 
 public:
 	CSystem(void);
@@ -50,3 +52,8 @@ private:
 };
 
 #define g_pSystem	CSystem::GetSingleton()
+
+#define NORMAL  0  //기본상태
+#define OVERLAP 1  //마우스와 겹침
+#define CLIKED  2  //마우스 클릭됨 
+ 

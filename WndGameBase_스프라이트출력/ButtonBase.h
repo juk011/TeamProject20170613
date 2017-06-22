@@ -24,10 +24,10 @@ public:
 
 	bool Load(const char* szURL);
 
-	virtual bool Initialize();
-	virtual void Terminate();
-	virtual bool Pulse();
-	virtual void Render();
+	bool Initialize();
+	void Terminate();
+	bool Pulse();
+	void Render();
 
 
 public:

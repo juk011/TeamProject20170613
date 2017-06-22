@@ -26,6 +26,7 @@
 #define WIDTH          800
 #define HEIGHT         600
 
+
 #include "resource.h"
 #include "Singleton.h"
 #include "Vector2d.h"
