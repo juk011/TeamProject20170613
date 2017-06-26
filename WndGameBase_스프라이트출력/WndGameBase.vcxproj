@@ -83,6 +83,7 @@
     <ClInclude Include="ButtonBase.h" />
     <ClInclude Include="FrameSkip.h" />
     <ClInclude Include="Gdi.h" />
+    <ClInclude Include="Hair.h" />
     <ClInclude Include="ImageInfo.h" />
     <ClInclude Include="ImageManager.h" />
     <ClInclude Include="InputHandler.h" />
@@ -104,6 +105,7 @@
     <ClCompile Include="ButtonBase.cpp" />
     <ClCompile Include="FrameSkip.cpp" />
     <ClCompile Include="Gdi.cpp" />
+    <ClCompile Include="Hair.cpp" />
     <ClCompile Include="ImageInfo.cpp" />
     <ClCompile Include="ImageManager.cpp" />
     <ClCompile Include="InputManager.cpp" />

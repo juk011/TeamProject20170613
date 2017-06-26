@@ -28,6 +28,9 @@
     <Filter Include="MainProc">
       <UniqueIdentifier>{f73a48e0-9624-4b04-9efb-f52f26022969}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Hair">
+      <UniqueIdentifier>{30248cc0-c371-4d18-8844-64f9666920e0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -90,6 +93,9 @@
     <ClInclude Include="ButtonBase.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
+    <ClInclude Include="Hair.h">
+      <Filter>Hair</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -133,6 +139,9 @@
     </ClCompile>
     <ClCompile Include="ButtonBase.cpp">
       <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Hair.cpp">
+      <Filter>Hair</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

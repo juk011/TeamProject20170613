@@ -42,4 +42,5 @@
 #include "ButtonBase.h"
 #include "System.h"
 #include "MainProc.h"
+#include "Hair.h"
 

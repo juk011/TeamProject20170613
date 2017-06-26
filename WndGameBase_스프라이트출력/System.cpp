@@ -246,6 +246,13 @@ bool CSystem::Initialize(void)
     EyeHG[2]->SetPos(Vector2D(500, 50));
 	EyeHG[2]->SetColorKey(RGB(255, 12, 255));
 
+	HairHG[0] = new CHair;
+	HairHG[0]->Initialize();
+	HairHG[0]->Load("./Images/Character/hair/chicken_hair.bmp");
+	HairHG[0]->SetPos(Vector2D(500, 50));
+	HairHG[0]->SetColorKey(RGB(255, 12, 255));
+
+
 	return true;
 }
 
@@ -310,8 +317,8 @@ void CSystem::Update(void)
 				EyeIcon[1]->Render();
 				if (m_bIsMouseLeft)
 				{
-					EyeHG[0]->Render();
 
+					HairHG[0]->IsActive = true;
 					EyeIcon[2]->Render();
 
 					
@@ -390,7 +397,7 @@ void CSystem::Update(void)
 		}
 
 
-		
+		HairHG[0]->Render();
 
 
 		
