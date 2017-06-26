@@ -39,11 +39,13 @@ bool CSystem::Initialize(void)
 	Start[0]->Load("./Images/ui_main/10_1.bmp");
 	Start[0]->SetColorKey(RGB(255, 0, 255));
     Start[0]->SetPosAndSize(Vector2D(145, 300),240,80,135,89);
+
 	Start[1] = new CButtonBase;
 	Start[1]->Initialize();
 	Start[1]->Load("./Images/ui_main/10_2.bmp");
 	Start[1]->SetColorKey(RGB(255, 0, 255));
 	Start[1]->SetPos(Vector2D(145, 300));
+
 	Start[2] = new CButtonBase;
 	Start[2]->Initialize();
 	Start[2]->Load("./Images/ui_main/10_3.bmp");
@@ -55,11 +57,13 @@ bool CSystem::Initialize(void)
 	Exit[0]->Load("./Images/ui_main/11_1.bmp");
 	Exit[0]->SetColorKey(RGB(255, 0, 255));
 	Exit[0]->SetPosAndSize(Vector2D(145, 420), 240, 80, 135, 89);
+
 	Exit[1] = new CButtonBase;
 	Exit[1]->Initialize();
 	Exit[1]->Load("./Images/ui_main/11_2.bmp");
 	Exit[1]->SetColorKey(RGB(255, 0, 255));
 	Exit[1]->SetPos(Vector2D(145, 420));
+
 	Exit[2] = new CButtonBase;
 	Exit[2]->Initialize();
 	Exit[2]->Load("./Images/ui_main/11_3.bmp");
@@ -163,14 +167,84 @@ bool CSystem::Initialize(void)
 	ShoesIcon[2]->SetPos(Vector2D(345, 260));
 	ShoesIcon[2]->SetColorKey(RGB(255, 0, 255));
 
+	RightArrow[0] = new CButtonBase;
+	RightArrow[0]->Initialize();
+	RightArrow[0]->Load("./Images/ui_main/7_1.bmp");
+	RightArrow[0]->SetPosAndSize(Vector2D(700, 230), 38, 49, 0, 0);
+	RightArrow[0]->SetColorKey(RGB(252, 0, 255));
+
+	RightArrow[1] = new CButtonBase;
+	RightArrow[1]->Initialize();
+	RightArrow[1]->Load("./Images/ui_main/7_2.bmp");
+	RightArrow[1]->SetPos(Vector2D(693, 230));
+	RightArrow[1]->SetColorKey(RGB(252, 0, 255));
+	
+	RightArrow[2] = new CButtonBase;
+	RightArrow[2]->Initialize();
+	RightArrow[2]->Load("./Images/ui_main/7_3.bmp");
+	RightArrow[2]->SetPos(Vector2D(700, 230));
+	RightArrow[2]->SetColorKey(RGB(252, 0, 255));
+
+	LeftArrow[0] = new CButtonBase;
+	LeftArrow[0]->Initialize();
+	LeftArrow[0]->Load("./Images/ui_main/8_1.bmp");
+	LeftArrow[0]->SetPosAndSize(Vector2D(450, 230), 38, 49, 0, 0);
+	LeftArrow[0]->SetColorKey(RGB(252, 0, 255));
+
+	LeftArrow[1] = new CButtonBase;
+	LeftArrow[1]->Initialize();
+	LeftArrow[1]->Load("./Images/ui_main/8_2.bmp");
+	LeftArrow[1]->SetPosAndSize(Vector2D(450, 230), 38, 49, 0, 0);
+	LeftArrow[1]->SetColorKey(RGB(252, 0, 255));
+	
+	LeftArrow[2] = new CButtonBase;
+	LeftArrow[2]->Initialize();
+	LeftArrow[2]->Load("./Images/ui_main/8_3.bmp");
+	LeftArrow[2]->SetPosAndSize(Vector2D(450, 230), 38, 49, 0, 0);
+	LeftArrow[2]->SetColorKey(RGB(252, 0, 255));
 
 	Body = new CBaseRender;
 	Body->Initialize();
-	Body->Load("./Images/Character/body.bmp");
-
-	Body->SetPos(Vector2D(80, 30));
+	Body->Load("./Images/Character/Body.bmp");
 	Body->SetPos(Vector2D(80, 50));
 	Body->SetColorKey(RGB(255, 0, 255));
+
+	Eye[0] = new CButtonBase;
+	Eye[0]->Initialize();
+	Eye[0]->Load("./Images/Character/eye/chicken_eye.bmp");
+	Eye[0]->SetPos(Vector2D(80, 50));
+	Eye[0]->SetColorKey(RGB(255, 0, 255));
+
+	Eye[1] = new CButtonBase;
+	Eye[1]->Initialize();
+	Eye[1]->Load("./Images/Character/eye/doughnut_eye.bmp");
+	Eye[1]->SetPos(Vector2D(80, 50));
+	Eye[1]->SetColorKey(RGB(255, 0, 255));
+
+	Eye[2] = new CButtonBase;
+	Eye[2]->Initialize();
+	Eye[2]->Load("./Images/Character/eye/sea_eye.bmp");
+	Eye[2]->SetPos(Vector2D(80, 50));
+	Eye[2]->SetColorKey(RGB(255, 0, 255));
+
+	EyeHG[0] = new CButtonBase;
+	EyeHG[0]->Initialize();
+	EyeHG[0]->Load("./Images/choose_Character/eye/chicken_eye.bmp");
+	EyeHG[0]->SetPosAndSize(Vector2D(500, 25),50,72,0,0);
+	EyeHG[0]->SetColorKey(RGB(255, 12, 255));
+
+
+	EyeHG[1] = new CButtonBase;
+	EyeHG[1]->Initialize();
+	EyeHG[1]->Load("./Images/Character/eye/doughnut_eye.bmp");
+    EyeHG[1]->SetPos(Vector2D(500, 50));
+    EyeHG[1]->SetColorKey(RGB(255, 12, 255));
+
+	EyeHG[2] = new CButtonBase;
+	EyeHG[2]->Initialize();
+	EyeHG[2]->Load("./Images/Character/eye/sea_eye.bmp");
+    EyeHG[2]->SetPos(Vector2D(500, 50));
+	EyeHG[2]->SetColorKey(RGB(255, 12, 255));
 
 	return true;
 }
@@ -203,23 +277,48 @@ void CSystem::Update(void)
 
 		if (!IsMain)
 		{
-
-
-
-
 			Stage->Render();
 
+		    Body->Render();
 
-			EyeIcon[0]->Render();
-			if (PtInRect(&EyeIcon[0]->rc, m_vMouseXY))
+
+			RightArrow[0]->Render();
+	
+			if (PtInRect(&RightArrow[0]->rc, m_vMouseXY))
 			{
-				EyeIcon[1]->Render();
-				if(m_bIsMouseLeft)
+				RightArrow[1]->Render();
+				if (m_bIsMouseLeft)
 				{
-					EyeIcon[2]->Render();
+					RightArrow[2]->Render();
 				}
 			}
 
+			LeftArrow[0]->Render();
+			if (PtInRect(&LeftArrow[0]->rc, m_vMouseXY))
+			{
+				LeftArrow[1]->Render();
+				if (m_bIsMouseLeft)
+				{
+					LeftArrow[2]->Render();
+				}
+			}
+
+			EyeIcon[0]->Render();
+			if (PtInRect(&EyeIcon[0]->rc, m_vMouseXY))
+
+			{
+				EyeIcon[1]->Render();
+				if (m_bIsMouseLeft)
+				{
+					EyeHG[0]->Render();
+
+					EyeIcon[2]->Render();
+
+					
+				
+				}
+			}
+		
 			MouthIcon[0]->Render();
 			if (PtInRect(&MouthIcon[0]->rc, m_vMouseXY))
 			{
@@ -263,7 +362,6 @@ void CSystem::Update(void)
 		}
 
 		
-
 	
 		if (PtInRect(&Start[0]->rc, m_vMouseXY))   //스타트 버튼 체크 
 		{

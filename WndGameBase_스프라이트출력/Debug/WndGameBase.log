@@ -1,4 +1,5 @@
 ﻿  System.cpp
+<<<<<<< HEAD
 c:\users\김주혁\desktop\teamproject20170613\wndgamebase_스프라이트출력\system.cpp(386): warning C4244: '=': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
 c:\users\김주혁\desktop\teamproject20170613\wndgamebase_스프라이트출력\system.cpp(387): warning C4244: '=': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   BaseRender.cpp
@@ -7,3 +8,11 @@ c:\users\김주혁\desktop\teamproject20170613\wndgamebase_스프라이트출력
   코드를 생성하고 있습니다...
   WndGameBase.vcxproj -> C:\Users\김주혁\Desktop\TeamProject20170613\WndGameBase_스프라이트출력\Debug\WndGameBase.exe
   WndGameBase.vcxproj -> C:\Users\김주혁\Desktop\TeamProject20170613\WndGameBase_스프라이트출력\Debug\WndGameBase.pdb (Partial PDB)
+=======
+c:\users\seo28\documents\github\teamproject20170613\wndgamebase_스프라이트출력\system.cpp(441): error C2059: 구문 오류: '}'
+c:\users\seo28\documents\github\teamproject20170613\wndgamebase_스프라이트출력\system.cpp(441): error C2143: 구문 오류: ';'이(가) '}' 앞에 없습니다.
+c:\users\seo28\documents\github\teamproject20170613\wndgamebase_스프라이트출력\system.cpp(444): error C2143: 구문 오류: ';'이(가) '{' 앞에 없습니다.
+c:\users\seo28\documents\github\teamproject20170613\wndgamebase_스프라이트출력\system.cpp(444): error C2447: '{': 함수 헤더가 없습니다. 이전 스타일의 형식 목록입니까?
+c:\users\seo28\documents\github\teamproject20170613\wndgamebase_스프라이트출력\system.cpp(496): warning C4244: '=': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\seo28\documents\github\teamproject20170613\wndgamebase_스프라이트출력\system.cpp(497): warning C4244: '=': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+>>>>>>> bfcbb322662a7dc5df98112fabaf2d42452bcac1

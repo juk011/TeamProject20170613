@@ -25,9 +25,24 @@ public:                 //여기서 그림생성
 	CBaseRender* m_pSprite;
 	CBaseRender* Body;
 	CBaseRender* MainGame;
+
+	CButtonBase* Eye[3];
+	CButtonBase* Mouth[3];
+	CButtonBase* Hair[3];
+	CButtonBase* Clothes[3];
+	CButtonBase* Shoes[3];
+
+	CButtonBase* EyeHG[3];
+	CButtonBase* MouthHG[3];
+	CButtonBase* HairHG[3];
+	CButtonBase* ClothesHG[3];
+	CButtonBase* ShoesHG[3];
+
 	CButtonBase* Start[3];
 	CButtonBase* Exit[3];
 
+	CButtonBase* LeftArrow[3];
+	CButtonBase* RightArrow[3];
 	CButtonBase* EyeIcon[3];
 	CButtonBase* MouthIcon[3];
 	CButtonBase* HairIcon[3];
