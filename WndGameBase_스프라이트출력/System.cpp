@@ -33,7 +33,6 @@ bool CSystem::Initialize(void)
 	MainGame->Load("./Images/MainGame.bmp");
 	MainGame->SetPos(Vector2D(0.0f, 0.0f));
 
-
 	Start[0] = new CButtonBase;
 	Start[0]->Initialize();
 	Start[0]->Load("./Images/ui_main/10_1.bmp");
@@ -280,9 +279,7 @@ void CSystem::Update(void)
 			Exit[0]->Render();
 
 		}
-
-
-		if (!IsMain)
+		else
 		{
 			Stage->Render();
 
@@ -312,17 +309,12 @@ void CSystem::Update(void)
 
 			EyeIcon[0]->Render();
 			if (PtInRect(&EyeIcon[0]->rc, m_vMouseXY))
-
 			{
 				EyeIcon[1]->Render();
 				if (m_bIsMouseLeft)
 				{
-
 					HairHG[0]->IsActive = true;
 					EyeIcon[2]->Render();
-
-					
-				
 				}
 			}
 		
