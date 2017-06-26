@@ -90,11 +90,14 @@ bool CSystem::Initialize(void)
 	EyeIcon[0]->Load("./Images/ui_main/1_1.bmp");
 	EyeIcon[0]->SetPosAndSize(Vector2D(345, 60), 96, 48, 0, 0);
 	EyeIcon[0]->SetColorKey(RGB(255, 0, 255));
+
 	EyeIcon[1] = new CButtonBase;
 	EyeIcon[1]->Initialize();
 	EyeIcon[1]->Load("./Images/ui_main/1_3.bmp");
 	EyeIcon[1]->SetPos(Vector2D(345, 60));
 	EyeIcon[1]->SetColorKey(RGB(255, 0, 255));
+
+
 	EyeIcon[2] = new CButtonBase;
 	EyeIcon[2]->Initialize();
 	EyeIcon[2]->Load("./Images/ui_main/1_2.bmp");
@@ -107,11 +110,13 @@ bool CSystem::Initialize(void)
 	MouthIcon[0]->Load("./Images/ui_main/3_1.bmp");
 	MouthIcon[0]->SetPosAndSize(Vector2D(345, 110), 96, 48, 0, 0);
 	MouthIcon[0]->SetColorKey(RGB(255, 0, 255));
+
 	MouthIcon[1] = new CButtonBase;
 	MouthIcon[1]->Initialize();
 	MouthIcon[1]->Load("./Images/ui_main/3_3.bmp");
 	MouthIcon[1]->SetPos(Vector2D(345, 110));
 	MouthIcon[1]->SetColorKey(RGB(255, 0, 255));
+
 	MouthIcon[2] = new CButtonBase;
 	MouthIcon[2]->Initialize();
 	MouthIcon[2]->Load("./Images/ui_main/3_2.bmp");
@@ -123,11 +128,13 @@ bool CSystem::Initialize(void)
 	HairIcon[0]->Load("./Images/ui_main/4_1.bmp");
 	HairIcon[0]->SetPosAndSize(Vector2D(345, 160), 96, 48, 0, 0);
 	HairIcon[0]->SetColorKey(RGB(255, 0, 255));
+
 	HairIcon[1] = new CButtonBase;
 	HairIcon[1]->Initialize();
 	HairIcon[1]->Load("./Images/ui_main/4_3.bmp");
 	HairIcon[1]->SetPos(Vector2D(345, 160));
 	HairIcon[1]->SetColorKey(RGB(255, 0, 255));
+
 	HairIcon[2] = new CButtonBase;
 	HairIcon[2]->Initialize();
 	HairIcon[2]->Load("./Images/ui_main/4_2.bmp");
@@ -226,30 +233,96 @@ bool CSystem::Initialize(void)
 	Eye[2]->SetPos(Vector2D(80, 50));
 	Eye[2]->SetColorKey(RGB(255, 0, 255));
 
-	EyeHG[0] = new CButtonBase;
+	EyeHG[0] = new CEye;
 	EyeHG[0]->Initialize();
 	EyeHG[0]->Load("./Images/choose_Character/eye/chicken_eye.bmp");
-	EyeHG[0]->SetPosAndSize(Vector2D(500, 25),50,72,0,0);
+	EyeHG[0]->SetPos(Vector2D(500, 25));
 	EyeHG[0]->SetColorKey(RGB(255, 12, 255));
 
 
-	EyeHG[1] = new CButtonBase;
+	EyeHG[1] = new CEye;
 	EyeHG[1]->Initialize();
-	EyeHG[1]->Load("./Images/Character/eye/doughnut_eye.bmp");
+	EyeHG[1]->Load("./Images/choose_Character/eye/doughnut_eye.bmp");
     EyeHG[1]->SetPos(Vector2D(500, 50));
     EyeHG[1]->SetColorKey(RGB(255, 12, 255));
 
-	EyeHG[2] = new CButtonBase;
+	EyeHG[2] = new CEye;
 	EyeHG[2]->Initialize();
-	EyeHG[2]->Load("./Images/Character/eye/sea_eye.bmp");
+	EyeHG[2]->Load("./Images/choose_Character/eye/sea_eye.bmp");
     EyeHG[2]->SetPos(Vector2D(500, 50));
 	EyeHG[2]->SetColorKey(RGB(255, 12, 255));
 
 	HairHG[0] = new CHair;
 	HairHG[0]->Initialize();
-	HairHG[0]->Load("./Images/Character/hair/chicken_hair.bmp");
+	HairHG[0]->Load("./Images/choose_Character/hair/chicken_hair.bmp");
 	HairHG[0]->SetPos(Vector2D(500, 50));
 	HairHG[0]->SetColorKey(RGB(255, 12, 255));
+
+	HairHG[1] = new CHair;
+	HairHG[1]->Initialize();
+	HairHG[1]->Load("./Images/choose_Character/hair/chicken_hair.bmp");
+	HairHG[1]->SetPos(Vector2D(500, 50));
+	HairHG[1]->SetColorKey(RGB(255, 12, 255));
+
+	HairHG[2] = new CHair;
+	HairHG[2]->Initialize();
+	HairHG[2]->Load("./Images/choose_Character/hair/chicken_hair.bmp");
+	HairHG[2]->SetPos(Vector2D(500, 50));
+	HairHG[2]->SetColorKey(RGB(255, 12, 255));
+
+	LipHG[0] = new CLip;
+	LipHG[0]->Initialize();
+	LipHG[0]->Load("./Images/choose_Character/lips/chicken_lips.bmp");
+	LipHG[0]->SetPos(Vector2D(500, 50));
+	LipHG[0]->SetColorKey(RGB(255, 12, 255));
+
+	LipHG[1] = new CLip;
+	LipHG[1]->Initialize();
+	LipHG[1]->Load("./Images/choose_Character/lips/doughnut_lips.bmp");
+	LipHG[1]->SetPos(Vector2D(500, 50));
+	LipHG[1]->SetColorKey(RGB(255, 12, 255));
+
+	LipHG[2] = new CLip;
+	LipHG[2]->Initialize();
+	LipHG[2]->Load("./Images/choose_Character/lips/sea_lips.bmp");
+	LipHG[2]->SetPos(Vector2D(500, 50));
+	LipHG[2]->SetColorKey(RGB(255, 12, 255));
+
+	ClothesHG[0] = new CClothes;
+	ClothesHG[0]->Initialize();
+	ClothesHG[0]->Load("./Images/choose_Character/clothe/chicken_clothes.bmp");
+	ClothesHG[0]->SetPos(Vector2D(500, 50));
+	ClothesHG[0]->SetColorKey(RGB(255, 12, 255));
+
+	ClothesHG[1] = new CClothes;
+	ClothesHG[1]->Initialize();
+	ClothesHG[1]->Load("./Images/choose_Character/clothe/doughnut_clothes.bmp");
+	ClothesHG[1]->SetPos(Vector2D(500, 50));
+	ClothesHG[1]->SetColorKey(RGB(255, 12, 255));
+
+	ClothesHG[2] = new CClothes;
+	ClothesHG[2]->Initialize();
+	ClothesHG[2]->Load("./Images/choose_Character/clothe/sea_clothes.bmp");
+	ClothesHG[2]->SetPos(Vector2D(500, 50));
+	ClothesHG[2]->SetColorKey(RGB(255, 12, 255));
+
+	ShoesHG[0] = new CShoes;
+	ShoesHG[0]->Initialize();
+	ShoesHG[0]->Load("./Images/choose_Character/shoes/chicken_shoes.bmp");
+	ShoesHG[0]->SetPos(Vector2D(500, 50));
+	ShoesHG[0]->SetColorKey(RGB(255, 12, 255));
+
+	ShoesHG[1] = new CShoes;
+	ShoesHG[1]->Initialize();
+	ShoesHG[1]->Load("./Images/choose_Character/shoes/doughnut_shoes.bmp");
+	ShoesHG[1]->SetPos(Vector2D(500, 50));
+	ShoesHG[1]->SetColorKey(RGB(255, 12, 255));
+
+	ShoesHG[2] = new CShoes;
+	ShoesHG[2]->Initialize();
+	ShoesHG[2]->Load("./Images/choose_Character/shoes/sea_shoes.bmp");
+	ShoesHG[2]->SetPos(Vector2D(500, 50));
+	ShoesHG[2]->SetColorKey(RGB(255, 12, 255));
 
 
 	return true;
@@ -294,6 +367,9 @@ void CSystem::Update(void)
 				if (m_bIsMouseLeft)
 				{
 					RightArrow[2]->Render();
+					EyeHG[0]->IsActive = false;
+					EyeHG[1]->IsActive = true;
+				
 				}
 			}
 
@@ -313,8 +389,9 @@ void CSystem::Update(void)
 				EyeIcon[1]->Render();
 				if (m_bIsMouseLeft)
 				{
-					HairHG[0]->IsActive = true;
+					EyeHG[0]->IsActive = true;
 					EyeIcon[2]->Render();
+
 				}
 			}
 		
@@ -324,6 +401,7 @@ void CSystem::Update(void)
 				MouthIcon[1]->Render();
 				if (m_bIsMouseLeft)
 				{
+					LipHG[0]->IsActive = true;
 					MouthIcon[2]->Render();
 				}
 			}
@@ -333,7 +411,8 @@ void CSystem::Update(void)
 			{
 				HairIcon[1]->Render();
 				if (m_bIsMouseLeft)
-				{
+				{	
+					HairHG[0]->IsActive = true;
 					HairIcon[2]->Render();
 				}
 			}
@@ -343,6 +422,8 @@ void CSystem::Update(void)
 				ClothesIcon[1]->Render();
 				if (m_bIsMouseLeft)
 				{
+
+					ClothesHG[0]->IsActive = true;
 					ClothesIcon[2]->Render();
 				}
 			}
@@ -352,6 +433,7 @@ void CSystem::Update(void)
 				ShoesIcon[1]->Render();
 				if (m_bIsMouseLeft)
 				{
+					ShoesHG[0]->IsActive = true;
 					ShoesIcon[2]->Render();
 				}
 			}
@@ -388,11 +470,13 @@ void CSystem::Update(void)
 			}
 		}
 
-
 		HairHG[0]->Render();
-
-
-		
+		EyeHG[0]->Render();
+		EyeHG[1]->Render();
+		EyeHG[2]->Render();
+		LipHG[0]->Render();
+		ClothesHG[0]->Render();
+		ShoesHG[0]->Render();
 
 #ifdef _DEBUG
 		static unsigned int nCount = 0;

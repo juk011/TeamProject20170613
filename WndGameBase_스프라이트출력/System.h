@@ -3,6 +3,10 @@
 class CFrameSkip;
 class CButtonBase;
 class CHair;
+class CEye;
+class CLip;
+class CClothes;
+class CShoes;
 
 class CSystem : public CSingleton<CSystem>,
 	            public CBaseWindow,
@@ -33,11 +37,11 @@ public:                 //여기서 그림생성
 	CButtonBase* Clothes[3];
 	CButtonBase* Shoes[3];
 
-	CButtonBase* EyeHG[3];
-	CButtonBase* MouthHG[3];
+	CEye* EyeHG[3];
+	CLip* LipHG[3];
 	CHair* HairHG[3];
-	CButtonBase* ClothesHG[3];
-	CButtonBase* ShoesHG[3];
+	CClothes* ClothesHG[3];
+	CShoes* ShoesHG[3];
 
 	CButtonBase* Start[3];
 	CButtonBase* Exit[3];
