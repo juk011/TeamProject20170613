@@ -43,4 +43,7 @@
 #include "System.h"
 #include "MainProc.h"
 #include "Hair.h"
-
+#include "Eye.h"
+#include "Lip.h"
+#include "Clothes.h"
+#include "Shoes.h"

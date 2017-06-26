@@ -81,6 +81,8 @@
     <ClInclude Include="BaseRender.h" />
     <ClInclude Include="BaseWindow.h" />
     <ClInclude Include="ButtonBase.h" />
+    <ClInclude Include="Clothes.h" />
+    <ClInclude Include="Eye.h" />
     <ClInclude Include="FrameSkip.h" />
     <ClInclude Include="Gdi.h" />
     <ClInclude Include="Hair.h" />
@@ -88,8 +90,10 @@
     <ClInclude Include="ImageManager.h" />
     <ClInclude Include="InputHandler.h" />
     <ClInclude Include="InputManager.h" />
+    <ClInclude Include="Lip.h" />
     <ClInclude Include="MainProc.h" />
     <ClInclude Include="Resource.h" />
+    <ClInclude Include="Shoes.h" />
     <ClInclude Include="Singleton.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="System.h" />
@@ -103,13 +107,17 @@
     <ClCompile Include="BaseRender.cpp" />
     <ClCompile Include="BaseWindow.cpp" />
     <ClCompile Include="ButtonBase.cpp" />
+    <ClCompile Include="Clothes.cpp" />
+    <ClCompile Include="Eye.cpp" />
     <ClCompile Include="FrameSkip.cpp" />
     <ClCompile Include="Gdi.cpp" />
     <ClCompile Include="Hair.cpp" />
     <ClCompile Include="ImageInfo.cpp" />
     <ClCompile Include="ImageManager.cpp" />
     <ClCompile Include="InputManager.cpp" />
+    <ClCompile Include="Lip.cpp" />
     <ClCompile Include="MainProc.cpp" />
+    <ClCompile Include="Shoes.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
