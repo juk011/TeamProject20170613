@@ -1,5 +1,9 @@
 ﻿  System.cpp
-c:\users\김주혁\desktop\teamproject20170613\wndgamebase_스프라이트출력\system.cpp(396): warning C4244: '=': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\김주혁\desktop\teamproject20170613\wndgamebase_스프라이트출력\system.cpp(397): warning C4244: '=': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\김주혁\desktop\teamproject20170613\wndgamebase_스프라이트출력\system.cpp(386): warning C4244: '=': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\김주혁\desktop\teamproject20170613\wndgamebase_스프라이트출력\system.cpp(387): warning C4244: '=': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  BaseRender.cpp
+c:\users\김주혁\desktop\teamproject20170613\wndgamebase_스프라이트출력\baserender.cpp(44): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\김주혁\desktop\teamproject20170613\wndgamebase_스프라이트출력\baserender.cpp(47): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  코드를 생성하고 있습니다...
   WndGameBase.vcxproj -> C:\Users\김주혁\Desktop\TeamProject20170613\WndGameBase_스프라이트출력\Debug\WndGameBase.exe
   WndGameBase.vcxproj -> C:\Users\김주혁\Desktop\TeamProject20170613\WndGameBase_스프라이트출력\Debug\WndGameBase.pdb (Partial PDB)

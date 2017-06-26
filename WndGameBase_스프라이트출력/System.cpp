@@ -87,13 +87,11 @@ bool CSystem::Initialize(void)
 	EyeIcon[0]->Load("./Images/ui_main/1_1.bmp");
 	EyeIcon[0]->SetPosAndSize(Vector2D(345, 60), 96, 48, 0, 0);
 	EyeIcon[0]->SetColorKey(RGB(255, 0, 255));
-
 	EyeIcon[1] = new CButtonBase;
 	EyeIcon[1]->Initialize();
 	EyeIcon[1]->Load("./Images/ui_main/1_3.bmp");
 	EyeIcon[1]->SetPos(Vector2D(345, 60));
 	EyeIcon[1]->SetColorKey(RGB(255, 0, 255));
-
 	EyeIcon[2] = new CButtonBase;
 	EyeIcon[2]->Initialize();
 	EyeIcon[2]->Load("./Images/ui_main/1_2.bmp");
@@ -106,13 +104,11 @@ bool CSystem::Initialize(void)
 	MouthIcon[0]->Load("./Images/ui_main/3_1.bmp");
 	MouthIcon[0]->SetPosAndSize(Vector2D(345, 110), 96, 48, 0, 0);
 	MouthIcon[0]->SetColorKey(RGB(255, 0, 255));
-
 	MouthIcon[1] = new CButtonBase;
 	MouthIcon[1]->Initialize();
 	MouthIcon[1]->Load("./Images/ui_main/3_3.bmp");
 	MouthIcon[1]->SetPos(Vector2D(345, 110));
 	MouthIcon[1]->SetColorKey(RGB(255, 0, 255));
-
 	MouthIcon[2] = new CButtonBase;
 	MouthIcon[2]->Initialize();
 	MouthIcon[2]->Load("./Images/ui_main/3_2.bmp");
@@ -124,13 +120,11 @@ bool CSystem::Initialize(void)
 	HairIcon[0]->Load("./Images/ui_main/4_1.bmp");
 	HairIcon[0]->SetPosAndSize(Vector2D(345, 160), 96, 48, 0, 0);
 	HairIcon[0]->SetColorKey(RGB(255, 0, 255));
-
 	HairIcon[1] = new CButtonBase;
 	HairIcon[1]->Initialize();
 	HairIcon[1]->Load("./Images/ui_main/4_3.bmp");
 	HairIcon[1]->SetPos(Vector2D(345, 160));
 	HairIcon[1]->SetColorKey(RGB(255, 0, 255));
-
 	HairIcon[2] = new CButtonBase;
 	HairIcon[2]->Initialize();
 	HairIcon[2]->Load("./Images/ui_main/4_2.bmp");
@@ -142,13 +136,11 @@ bool CSystem::Initialize(void)
 	ClothesIcon[0]->Load("./Images/ui_main/5_1.bmp");
 	ClothesIcon[0]->SetPosAndSize(Vector2D(345, 210), 96, 48, 0, 0);
 	ClothesIcon[0]->SetColorKey(RGB(255, 0, 255));
-
 	ClothesIcon[1] = new CButtonBase;
 	ClothesIcon[1]->Initialize();
 	ClothesIcon[1]->Load("./Images/ui_main/5_3.bmp");
 	ClothesIcon[1]->SetPos(Vector2D(345, 210));
 	ClothesIcon[1]->SetColorKey(RGB(255, 0, 255));
-
 	ClothesIcon[2] = new CButtonBase;
 	ClothesIcon[2]->Initialize();
 	ClothesIcon[2]->Load("./Images/ui_main/5_2.bmp");
@@ -160,13 +152,11 @@ bool CSystem::Initialize(void)
 	ShoesIcon[0]->Load("./Images/ui_main/6_1.bmp");
 	ShoesIcon[0]->SetPosAndSize(Vector2D(345, 260), 96, 48, 0, 0);
 	ShoesIcon[0]->SetColorKey(RGB(255, 0, 255));
-
 	ShoesIcon[1] = new CButtonBase;
 	ShoesIcon[1]->Initialize();
 	ShoesIcon[1]->Load("./Images/ui_main/6_3.bmp");
 	ShoesIcon[1]->SetPos(Vector2D(345, 260));
 	ShoesIcon[1]->SetColorKey(RGB(255, 0, 255));
-
 	ShoesIcon[2] = new CButtonBase;
 	ShoesIcon[2]->Initialize();
 	ShoesIcon[2]->Load("./Images/ui_main/6_2.bmp");
