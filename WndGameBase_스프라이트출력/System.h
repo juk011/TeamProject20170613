@@ -20,12 +20,16 @@ private:
 	CInputManager*	m_pInputManager;
 	CImageManager*	m_pImageManager;
 
+public:
+	int imageKinds;
+
 private:
 	Vector2D	m_vMouseXY;
 	bool m_bIsMouseLeft;
 	bool m_bIsMouseRight;
 	bool m_bIsMouseMid;
-public:                 //여기서 그림생성
+
+	//여기서 그림생성
 	CBaseRender* Stage;
 	CBaseRender* m_pSprite;
 	CBaseRender* Body;
@@ -61,6 +65,7 @@ public:
 public:
 	bool Initialize(void);
 	void Update(void);
+	void reset(void);
 	void Terminate(void);
 	void Run(void);
 public:

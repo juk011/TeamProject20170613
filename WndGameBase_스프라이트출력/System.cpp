@@ -236,7 +236,7 @@ bool CSystem::Initialize(void)
 	EyeHG[0] = new CEye;
 	EyeHG[0]->Initialize();
 	EyeHG[0]->Load("./Images/choose_Character/eye/chicken_eye.bmp");
-	EyeHG[0]->SetPos(Vector2D(500, 25));
+	EyeHG[0]->SetPos(Vector2D(500, 50));
 	EyeHG[0]->SetColorKey(RGB(255, 12, 255));
 
 
@@ -260,13 +260,13 @@ bool CSystem::Initialize(void)
 
 	HairHG[1] = new CHair;
 	HairHG[1]->Initialize();
-	HairHG[1]->Load("./Images/choose_Character/hair/chicken_hair.bmp");
+	HairHG[1]->Load("./Images/choose_Character/hair/doughnut_hair.bmp");
 	HairHG[1]->SetPos(Vector2D(500, 50));
 	HairHG[1]->SetColorKey(RGB(255, 12, 255));
 
 	HairHG[2] = new CHair;
 	HairHG[2]->Initialize();
-	HairHG[2]->Load("./Images/choose_Character/hair/chicken_hair.bmp");
+	HairHG[2]->Load("./Images/choose_Character/hair/sea_hair.bmp");
 	HairHG[2]->SetPos(Vector2D(500, 50));
 	HairHG[2]->SetColorKey(RGB(255, 12, 255));
 
@@ -324,6 +324,7 @@ bool CSystem::Initialize(void)
 	ShoesHG[2]->SetPos(Vector2D(500, 50));
 	ShoesHG[2]->SetColorKey(RGB(255, 12, 255));
 
+	imageKinds = 0; // 1 눈, 2 입, 3 머리, 4 옷, 5 신발
 
 	return true;
 }
@@ -358,7 +359,6 @@ void CSystem::Update(void)
 
 		    Body->Render();
 
-
 			RightArrow[0]->Render();
 	
 			if (PtInRect(&RightArrow[0]->rc, m_vMouseXY))
@@ -367,9 +367,74 @@ void CSystem::Update(void)
 				if (m_bIsMouseLeft)
 				{
 					RightArrow[2]->Render();
-					EyeHG[0]->IsActive = false;
-					EyeHG[1]->IsActive = true;
-				
+					switch (imageKinds)
+					{
+					case 1:
+						if (EyeHG[0]->IsActive == true)
+						{
+							EyeHG[0]->IsActive = false;
+							EyeHG[1]->IsActive = true;
+							Sleep(100);
+						}
+						else if (EyeHG[1]->IsActive == true)
+						{
+							EyeHG[1]->IsActive = false;
+							EyeHG[2]->IsActive = true;
+						}
+						break;
+					case 2:
+						if (LipHG[0]->IsActive == true)
+						{
+							LipHG[0]->IsActive = false;
+							LipHG[1]->IsActive = true;
+							Sleep(100);
+						}
+						else if (LipHG[1]->IsActive == true)
+						{
+							LipHG[1]->IsActive = false;
+							LipHG[2]->IsActive = true;
+						}
+						break;
+					case 3:
+						if (HairHG[0]->IsActive == true)
+						{
+							HairHG[0]->IsActive = false;
+							HairHG[1]->IsActive = true;
+							Sleep(100);
+						}
+						else if (HairHG[1]->IsActive == true)
+						{
+							HairHG[1]->IsActive = false;
+							HairHG[2]->IsActive = true;
+						}
+						break;
+					case 4:
+						if (ClothesHG[0]->IsActive == true)
+						{
+							ClothesHG[0]->IsActive = false;
+							ClothesHG[1]->IsActive = true;
+							Sleep(100);
+						}
+						else if (ClothesHG[1]->IsActive == true)
+						{
+							ClothesHG[1]->IsActive = false;
+							ClothesHG[2]->IsActive = true;
+						}
+						break;
+					case 5:
+						if (ShoesHG[0]->IsActive == true)
+						{
+							ShoesHG[0]->IsActive = false;
+							ShoesHG[1]->IsActive = true;
+							Sleep(100);
+						}
+						else if (ShoesHG[1]->IsActive == true)
+						{
+							ShoesHG[1]->IsActive = false;
+							ShoesHG[2]->IsActive = true;
+						}
+						break;
+					}	
 				}
 			}
 
@@ -380,27 +445,98 @@ void CSystem::Update(void)
 				if (m_bIsMouseLeft)
 				{
 					LeftArrow[2]->Render();
+					switch (imageKinds)
+					{
+					case 1:
+						if (EyeHG[2]->IsActive == true)
+						{
+							EyeHG[2]->IsActive = false;
+							EyeHG[1]->IsActive = true;
+							Sleep(100);
+						}
+						else if (EyeHG[1]->IsActive == true)
+						{
+							EyeHG[1]->IsActive = false;
+							EyeHG[0]->IsActive = true;
+						}
+						break;
+					case 2:
+						if (LipHG[2]->IsActive == true)
+						{
+							LipHG[2]->IsActive = false;
+							LipHG[1]->IsActive = true;
+							Sleep(100);
+						}
+						else if (LipHG[1]->IsActive == true)
+						{
+							LipHG[1]->IsActive = false;
+							LipHG[0]->IsActive = true;
+						}
+						break;
+					case 3:
+						if (HairHG[2]->IsActive == true)
+						{
+							HairHG[2]->IsActive = false;
+							HairHG[1]->IsActive = true;
+							Sleep(100);
+						}
+						else if (HairHG[1]->IsActive == true)
+						{
+							HairHG[1]->IsActive = false;
+							HairHG[0]->IsActive = true;
+						}
+						break;
+					case 4:
+						if (ClothesHG[2]->IsActive == true)
+						{
+							ClothesHG[2]->IsActive = false;
+							ClothesHG[1]->IsActive = true;
+							Sleep(100);
+						}
+						else if (ClothesHG[1]->IsActive == true)
+						{
+							ClothesHG[1]->IsActive = false;
+							ClothesHG[0]->IsActive = true;
+						}
+						break;
+					case 5:
+						if (ShoesHG[2]->IsActive == true)
+						{
+							ShoesHG[2]->IsActive = false;
+							ShoesHG[1]->IsActive = true;
+							Sleep(100);
+						}
+						else if (ShoesHG[1]->IsActive == true)
+						{
+							ShoesHG[1]->IsActive = false;
+							ShoesHG[0]->IsActive = true;
+						}
+						break;
+					}
 				}
 			}
 
 			EyeIcon[0]->Render();
 			if (PtInRect(&EyeIcon[0]->rc, m_vMouseXY))
-			{
+			{	
 				EyeIcon[1]->Render();
 				if (m_bIsMouseLeft)
 				{
+					imageKinds = 1;
+					reset();
 					EyeHG[0]->IsActive = true;
 					EyeIcon[2]->Render();
-
 				}
 			}
 		
 			MouthIcon[0]->Render();
 			if (PtInRect(&MouthIcon[0]->rc, m_vMouseXY))
-			{
+			{			
 				MouthIcon[1]->Render();
 				if (m_bIsMouseLeft)
 				{
+					imageKinds = 2;
+					reset();
 					LipHG[0]->IsActive = true;
 					MouthIcon[2]->Render();
 				}
@@ -412,44 +548,46 @@ void CSystem::Update(void)
 				HairIcon[1]->Render();
 				if (m_bIsMouseLeft)
 				{	
+					imageKinds = 3;
+					reset();
 					HairHG[0]->IsActive = true;
 					HairIcon[2]->Render();
 				}
 			}
+
 			ClothesIcon[0]->Render();
 			if (PtInRect(&ClothesIcon[0]->rc, m_vMouseXY))
 			{
 				ClothesIcon[1]->Render();
 				if (m_bIsMouseLeft)
 				{
-
+					imageKinds = 4;
+					reset();
 					ClothesHG[0]->IsActive = true;
 					ClothesIcon[2]->Render();
 				}
 			}
+
 			ShoesIcon[0]->Render();
 			if (PtInRect(&ShoesIcon[0]->rc, m_vMouseXY))
 			{
 				ShoesIcon[1]->Render();
 				if (m_bIsMouseLeft)
 				{
+					imageKinds = 5;
+					reset();
 					ShoesHG[0]->IsActive = true;
 					ShoesIcon[2]->Render();
 				}
 			}
 
-
-
 		}
 
-		
-	
 		if (PtInRect(&Start[0]->rc, m_vMouseXY))   //스타트 버튼 체크 
 		{
 			Start[1]->Render();
 			if (m_bIsMouseLeft)
-			{
-			
+			{	
 				Start[2]->Render();
 				IsMain = false;
 				Start[0]->Terminate();
@@ -471,12 +609,20 @@ void CSystem::Update(void)
 		}
 
 		HairHG[0]->Render();
+		HairHG[1]->Render();
+		HairHG[2]->Render();
 		EyeHG[0]->Render();
 		EyeHG[1]->Render();
 		EyeHG[2]->Render();
 		LipHG[0]->Render();
+		LipHG[1]->Render();
+		LipHG[2]->Render();
 		ClothesHG[0]->Render();
+		ClothesHG[1]->Render(); 
+		ClothesHG[2]->Render();
 		ShoesHG[0]->Render();
+		ShoesHG[1]->Render();
+		ShoesHG[2]->Render();
 
 #ifdef _DEBUG
 		static unsigned int nCount = 0;
@@ -509,6 +655,24 @@ void CSystem::Update(void)
 
 		g_pGdi->Blt();
 	}
+}
+
+void CSystem::reset(void)
+{
+	for (int i = 0; i<3; i++)
+		EyeHG[i]->IsActive = false;
+
+	for (int i = 0; i<3; i++)
+		LipHG[i]->IsActive = false;
+
+	for (int i = 0; i<3; i++)
+		HairHG[i]->IsActive = false;
+
+	for (int i = 0; i < 3; i++)
+		ClothesHG[i]->IsActive = false;
+
+	for (int i = 0; i < 3; i++)
+		ShoesHG[i]->IsActive = false;
 }
 
 void CSystem::Terminate(void)
