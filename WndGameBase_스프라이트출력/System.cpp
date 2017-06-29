@@ -346,14 +346,14 @@ void CSystem::Update(void)
         */
 
 	
-		if (IsMain)
+		if (IsMain) // 메인화면
 		{
 			MainGame->Render();
 			Start[0]->Render();
 			Exit[0]->Render();
 
 		}
-		else
+		else // 게임 실행 화면
 		{
 			Stage->Render();
 
@@ -374,7 +374,7 @@ void CSystem::Update(void)
 						{
 							EyeHG[0]->IsActive = false;
 							EyeHG[1]->IsActive = true;
-							Sleep(100);
+							Sleep(150);
 						}
 						else if (EyeHG[1]->IsActive == true)
 						{
@@ -387,7 +387,7 @@ void CSystem::Update(void)
 						{
 							LipHG[0]->IsActive = false;
 							LipHG[1]->IsActive = true;
-							Sleep(100);
+							Sleep(150);
 						}
 						else if (LipHG[1]->IsActive == true)
 						{
@@ -400,7 +400,7 @@ void CSystem::Update(void)
 						{
 							HairHG[0]->IsActive = false;
 							HairHG[1]->IsActive = true;
-							Sleep(100);
+							Sleep(150);
 						}
 						else if (HairHG[1]->IsActive == true)
 						{
@@ -413,7 +413,7 @@ void CSystem::Update(void)
 						{
 							ClothesHG[0]->IsActive = false;
 							ClothesHG[1]->IsActive = true;
-							Sleep(100);
+							Sleep(150);
 						}
 						else if (ClothesHG[1]->IsActive == true)
 						{
@@ -426,7 +426,7 @@ void CSystem::Update(void)
 						{
 							ShoesHG[0]->IsActive = false;
 							ShoesHG[1]->IsActive = true;
-							Sleep(100);
+							Sleep(150);
 						}
 						else if (ShoesHG[1]->IsActive == true)
 						{
@@ -452,7 +452,7 @@ void CSystem::Update(void)
 						{
 							EyeHG[2]->IsActive = false;
 							EyeHG[1]->IsActive = true;
-							Sleep(100);
+							Sleep(150);
 						}
 						else if (EyeHG[1]->IsActive == true)
 						{
@@ -465,7 +465,7 @@ void CSystem::Update(void)
 						{
 							LipHG[2]->IsActive = false;
 							LipHG[1]->IsActive = true;
-							Sleep(100);
+							Sleep(150);
 						}
 						else if (LipHG[1]->IsActive == true)
 						{
@@ -478,7 +478,7 @@ void CSystem::Update(void)
 						{
 							HairHG[2]->IsActive = false;
 							HairHG[1]->IsActive = true;
-							Sleep(100);
+							Sleep(150);
 						}
 						else if (HairHG[1]->IsActive == true)
 						{
@@ -491,7 +491,7 @@ void CSystem::Update(void)
 						{
 							ClothesHG[2]->IsActive = false;
 							ClothesHG[1]->IsActive = true;
-							Sleep(100);
+							Sleep(150);
 						}
 						else if (ClothesHG[1]->IsActive == true)
 						{
@@ -504,7 +504,7 @@ void CSystem::Update(void)
 						{
 							ShoesHG[2]->IsActive = false;
 							ShoesHG[1]->IsActive = true;
-							Sleep(100);
+							Sleep(150);
 						}
 						else if (ShoesHG[1]->IsActive == true)
 						{

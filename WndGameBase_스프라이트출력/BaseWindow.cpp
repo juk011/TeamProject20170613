@@ -35,19 +35,52 @@ bool CBaseWindow::Initialize()
 
 	RegisterClassEx(&wcex); //윈도우 클래스 등록
 
-	//윈도우 생성
-	m_hWnd = CreateWindow(szTitle, szTitle, WS_BORDER| WS_CAPTION | WS_SYSMENU,
-		0, 0, 0, 0, NULL, NULL, hInstance, NULL);
+	int msgID = MessageBox(NULL, L"전체화면으로 전환할까요?", L"***게임", MB_OKCANCEL);
+	
+	
+	////윈도우 생성
+	//m_hWnd = CreateWindow(szTitle, szTitle, WS_BORDER | WS_POPUP,
+	//	0, 0, 0, 0, NULL, NULL, hInstance, NULL);
 
 	RECT rtRect; //사각형 구조체
 
 	rtRect.left = 0;
 	rtRect.top = 0;
-	rtRect.right = 800;
-	rtRect.bottom = 600;
+	rtRect.right = WIDTH;
+	rtRect.bottom = HEIGHT;
 
-	//윈도우 형식을 재정의 함수
-	AdjustWindowRect(&rtRect, WS_BORDER| WS_CAPTION | WS_SYSMENU, false);
+	////윈도우 형식을 재정의 함수
+	//AdjustWindowRect(&rtRect, WS_BORDER | WS_BORDER | WS_POPUP, false);
+
+	// 윈도우 전체화면
+	DEVMODE devmode;
+
+	ZeroMemory(&devmode, sizeof(DEVMODE));
+	devmode.dmSize = sizeof(DEVMODE);
+	devmode.dmBitsPerPel = 32;
+	devmode.dmPelsWidth = WIDTH;
+	devmode.dmPelsHeight = HEIGHT;
+	devmode.dmFields = DM_BITSPERPEL | DM_PELSWIDTH | DM_PELSHEIGHT;
+
+	if (msgID == 1)
+	{
+		//윈도우 생성
+		m_hWnd = CreateWindow(szTitle, szTitle, WS_BORDER | WS_POPUP,
+			0, 0, 0, 0, NULL, NULL, hInstance, NULL);
+
+		//윈도우 형식을 재정의 함수
+		AdjustWindowRect(&rtRect, WS_BORDER | WS_BORDER | WS_POPUP, true);
+
+		ChangeDisplaySettings(&devmode, CDS_FULLSCREEN);
+	}
+	else if (msgID == 2)
+	{
+		//윈도우 생성
+		m_hWnd = CreateWindow(szTitle, szTitle, WS_BORDER | WS_CAPTION,
+			0, 0, 0, 0, NULL, NULL, hInstance, NULL);
+
+		AdjustWindowRect(&rtRect, WS_BORDER | WS_BORDER | WS_CAPTION, false);
+	}
 
 	//윈도우 위치
 	SetWindowPos(m_hWnd, NULL, 0, 0, rtRect.right - rtRect.left, rtRect.bottom - rtRect.top, SWP_SHOWWINDOW);
